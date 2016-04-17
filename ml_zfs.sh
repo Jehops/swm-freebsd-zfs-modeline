@@ -11,7 +11,7 @@ stump_pid="$(pgrep -a -n stumpwm)"
 while kill -0 "$stump_pid" > /dev/null 2>&1; do
     io_info=$(iostat -c2 -w "$interval" -x "$disk" | \
 		     awk 'NR%6==0 {print $4 " " $5}')
-    set -- ${io_info}
+    set -- $io_info
     read=$(bc -e "scale=1;$1/1024" -e quit)
     write=$(bc -e "scale=1;$2/1024" -e quit)
     zfs_info="$(zpool list -Hp "$pool")"
