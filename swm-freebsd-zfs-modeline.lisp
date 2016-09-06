@@ -1,9 +1,12 @@
 ;; swm-freebsd-zfs-modeline.lisp
 ;;
-;; Put %P %O %T %F %p in your modeline format string to show the zfs pool name,
-;; space occupied, total space, free space, and percentage of space occupied for
-;; the pool respectively.  All sizes are in GiB.
-;;
+;; %P ZFS pool name
+;; %O Occupied space in GiB
+;; %T Total space GiB
+;; %F Free space GiB
+;; %p Precentage of total space occupied
+;; %R read throughput in MiB/s
+;; %W write throughput in MiB/s
 
 (in-package #:swm-freebsd-zfs-modeline)
 
