@@ -25,5 +25,5 @@ while kill -0 "$stump_pid" > /dev/null 2>&1; do
     # pool name used total free percent read write
     printf "%s %3.0f %3.0f %3.0f %3.0f %3.1f %3.1f\n"\
 	   "$1" $(( $3/1024/1024/1024 )) $(( $2/1024/1024/1024 ))\
-	   $(( $4/1024/1024/1024 )) "$7" "$read" "$write"
+	   $(( $4/1024/1024/1024 )) "$8" "$read" "$write"
 done
