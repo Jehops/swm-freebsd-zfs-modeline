@@ -10,8 +10,8 @@ pool="zroot"
 # if you simply start SBCL and load StumpWM.  If you are using the FreeBSD
 # StumpWM package, use the second line.
 
-#stump_pid="$(pgrep -a -n stumpwm)"
-stump_pid="$(pgrep -anf -U "$(id -u)" "sbcl .*(stumpwm:stumpwm)")"
+stump_pid="$(pgrep -a -n stumpwm)"
+#stump_pid="$(pgrep -anf -U "$(id -u)" "sbcl .*(stumpwm:stumpwm)")"
 
 # while stumpwm is still running
 while kill -0 "$stump_pid" > /dev/null 2>&1; do
